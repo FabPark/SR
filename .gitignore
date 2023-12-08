@@ -1,0 +1,26 @@
+# Ignore node_modules except the root directory
+/node_modules/*
+!/node_modules/
+
+# Ignore all .env files
+.env*
+
+# Ignore coverage reports
+/coverage
+
+# Ignore build or dist directories
+/build
+/dist
+/out
+/lib
+
+# Ignore logs and runtime data
+/logs
+*.log
+/pids
+*.pid
+*.seed
+
+# Ignore VSCode and IntelliJ/WebStorm configuration
+.vscode/
+.idea/
