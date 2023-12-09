@@ -34,7 +34,7 @@ const AddRestaurant = (props) => {
 
     axios
       .post(
-        "http://localhost:4000/api/add",
+        "https://sr-back.onrender.com/api/add",
         { ...restaurant, reason },
         {
           headers: {

@@ -29,7 +29,7 @@ function UpdateRestaurantInfo(props) {
   };
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/restaurants/${id}`)
+      .get(`https://sr-back.onrender.com/api/restaurants/${id}`)
       .then((res) => {
         setRestaurant({
           englishName: res.data.englishName,
@@ -67,7 +67,7 @@ function UpdateRestaurantInfo(props) {
         reason: reason,
       };
       axios
-        .put(`http://localhost:4000/update`, data, {
+        .put(`https://sr-back.onrender.com/update`, data, {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

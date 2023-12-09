@@ -19,7 +19,7 @@ export const useLogin = () => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch("http://localhost:4000/api/user/login", {
+    const response = await fetch("https://sr-back.onrender.com/api/user/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -35,7 +35,7 @@ export const useLogin = () => {
       console.log("User data stored in local storage:", json);
 
       const responseWithUsername = await fetch(
-        "http://localhost:4000/api/user/users",
+        "https://sr-back.onrender.com/api/user/users",
         {
           method: "GET",
           headers: { Authorization: `Bearer ${json.token}` },
