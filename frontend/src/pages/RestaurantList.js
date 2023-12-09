@@ -15,7 +15,8 @@ function RestaurantList() {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:4000/api/restaurants?page=${currentPage}&limit=${itemsPerPage}`
+        // `http://localhost:4000/api/restaurants?page=${currentPage}&limit=${itemsPerPage}`
+        `https://sr-back.onrender.com/api/restaurants?page=${currentPage}&limit=${itemsPerPage}`
       )
       .then((res) => {
         const sortedRestaurants = res.data.sort((a, b) => b.rating - a.rating);
