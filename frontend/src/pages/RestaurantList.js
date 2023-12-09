@@ -42,18 +42,17 @@ function RestaurantList() {
   };
 
   return (
-    <div className="flex flex-wrap justify-center rounded-lg shadow sm:p-8 dark:bg-gray-800">
+    <div className="flex flex-wrap justify-center min-h-screen rounded-lg shadow sm:p-8 dark:bg-gray-800">
       <div className="w-full text-center relative z-0">
         <img
           src="/images/Suwon.jpg"
           alt="Suwon"
-          className="w-full fixed top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3 z-[-1]"
-          style={{ maxWidth: "1800px", maxHeight: "700px" }}
+          className="w-75 h-50 max-w-full fixed top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3 z-[-1]"
         />
 
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/3 text-white">
           <h2
-            className="headlogo text-4xl font-bold mt-4"
+            className="headlogo text-4xl font-bold mt-5"
             style={{ fontSize: "3rem", fontWeight: "bold" }}
           >
             Welcome to Suwon
@@ -92,17 +91,6 @@ function RestaurantList() {
       <br />
       <br />
       <br />
-      <br />
-
-      <div
-        className=" w-full relative z-10 mt-8 p-8 z-20 bg-white mx-auto"
-        style={{ width: "100%" }}
-      >
-        <br />
-        <br />
-        <hr />
-      </div>
-      <div></div>
       <div
         className="w-full flex flex-wrap justify-center relative z-20 bg-white"
         style={{ width: "100%" }}
