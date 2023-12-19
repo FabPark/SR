@@ -55,7 +55,7 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="navbar fixed top-0 bg-red-300 text-black  relative z-50">
+    <nav className="navbar fixed top-0 bg-gray-400 text-black  relative z-50">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 relative z-10">
         <Link
           to="/"

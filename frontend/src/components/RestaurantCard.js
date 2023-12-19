@@ -27,13 +27,13 @@ const RestaurantCard = (props) => {
         height={80}
         className="w-full"
       />
-      <div className="desc bg-red-300 w-full">
+      <div className="desc bg-gray-300 w-full">
         <h2 className="headlogo text-sm font-medium text-gray-900 truncate leading-tight dark:text-white">
           <Link to={`/restaurant-detail/${restaurant._id}`}>
             {restaurant.englishName}
           </Link>
         </h2>
-        <h3 className="text-sm text-gray-500 truncate dark:text-gray-400">
+        <h3 className="text-sm text-gray-800 truncate dark:text-gray-400">
           {restaurant.englishCategory && restaurant.englishCategory.length > 0
             ? restaurant.englishCategory.join(", ")
             : "No categories available"}
