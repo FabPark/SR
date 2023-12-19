@@ -4,8 +4,10 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const Suwon = require("../../models/restaurantModel");
 
-const clientId = "d95j10j8u8";
-const clientSecret = "pZpqzZs7siVvlR82O5XHaWKoGFoharDScFna0RQw";
+require('dotenv').config()
+
+const clientId = process.env.GEO_ID;
+const clientSecret = process.env.GEO_PW;
 
 router.get("/geocode/:restaurantId", async (req, res) => {
   try {
