@@ -14,7 +14,9 @@ export default {
         'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
     ],
     theme: {
+      
       extend: {
+        
         colors: {
             // tahiti: colors.tahiti,
             // tahiti: {
@@ -109,9 +111,29 @@ export default {
         // Add more custom colors if needed
       },
     },
+    screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1023px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    }
     },
     plugins: [
-        require('flowbite/plugin')
+        require('flowbite/plugin'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/container-queries'),
     ],
 
     darkMode: 'class',
