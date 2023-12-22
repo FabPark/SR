@@ -3,11 +3,9 @@ import React from "react";
 function About() {
   return (
     <div className="bg-white flex justify-center items-center">
-      {/* <div className="w-1/2 flex-col justify-center items-center bg-white p-6 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"> */}
-      <div className="w-1/2 sm:w-full flex-col justify-center items-center bg-white p-6 md:p-8 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-3/4 flex-col justify-center items-center bg-white p-6 md:p-8 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <br />
         <div>
-          {/* <h1 className="headlogo text-5xl font-extrabold text-center mb-.5"> */}
           <h1 className="headlogo text-5xl sm:text-4xl font-extrabold text-center mb-.5">
             About
           </h1>

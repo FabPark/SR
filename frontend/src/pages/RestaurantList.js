@@ -15,7 +15,6 @@ function RestaurantList() {
   useEffect(() => {
     axios
       .get(
-        // `http://localhost:4000/api/restaurants?page=${currentPage}&limit=${itemsPerPage}`
         `https://sr-back.onrender.com/api/restaurants?page=${currentPage}&limit=${itemsPerPage}`
       )
       .then((res) => {
@@ -53,7 +52,7 @@ function RestaurantList() {
 
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/3 text-white">
           <h2
-            className="headlogo text-4xl font-bold mt-5"
+            className="headlogo text-4xl font-bold mt-60"
             style={{ fontSize: "3rem", fontWeight: "bold" }}
           >
             Welcome to Suwon

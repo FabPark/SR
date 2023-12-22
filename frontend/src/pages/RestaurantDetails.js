@@ -123,7 +123,7 @@ function RestaurantDetails() {
 
   return (
     <div className="bg-white flex justify-center items-center">
-      <div className="w-50 flex-col justify-center items-center bg-white p-10 rounded-lg shadow sm:p-10 dark:bg-gray-800 dark:border-gray-700">
+      <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-3/4 flex-col justify-center items-center bg-white p-10 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <img
           src={selectedRestaurant.img}
           alt="Restaurants"
@@ -203,7 +203,7 @@ function RestaurantDetails() {
                     d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
                   />
                 </svg>
-                <p class="text-xl font-medium text-gray-900 truncate dark:text-white ml-2">
+                <p class="text-xl font-light text-gray-900 truncate dark:text-white ml-2">
                   Address
                 </p>
                 <p class="text-xl text-gray-500 truncate dark:text-gray-400 ml-2">
@@ -297,7 +297,7 @@ function RestaurantDetails() {
             geocodeData={geocodeData}
           />
         </div>
-        <div className="w-full bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full bg-white rounded-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700">
   {!user ? (
       <div className="text-center mb-4">
       <p class="text-xl font-light text-gray-900 truncate dark:text-white ml-2">
@@ -324,7 +324,7 @@ function RestaurantDetails() {
 <br />
 
         <div className="flex justify-between mb-4">
-          <div className="w-full max-w-md p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-full max-w-md p-4 bg-white rounded-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             {user ? (
               <button
                 type="submit"
@@ -339,7 +339,7 @@ function RestaurantDetails() {
             )}
           </div>
 
-          <div className="w-full max-w-md p-4 bg-white rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-full max-w-md p-4 bg-white rounded-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             {user ? (
               <Link
                 to={`/edit-restaurant/${restaurantId}`}
