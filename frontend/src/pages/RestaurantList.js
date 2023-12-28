@@ -12,7 +12,7 @@ import { Pagination } from "../components/Pagination";
 const boxStyle = css`
   display: block;
   margin: 0 auto;
-  border-color: red; 
+  border-color: grey; 
 `;
 
 function RestaurantList() {
@@ -113,7 +113,7 @@ function RestaurantList() {
       <p className="text-lg font-semibold mb-2">Please wait while we curate a delightful experience for you...</p>
       <p className="text-sm text-gray-600 mb-4">Your patience is truly appreciated!</p>
     </div>
-    <ClimbingBoxLoader css={boxstyle} size={30} color={"grey"} loading={loading} />
+    <ClimbingBoxLoader css={boxStyle} size={30} color={"grey"} loading={loading} />
   </div>
 )}
 
