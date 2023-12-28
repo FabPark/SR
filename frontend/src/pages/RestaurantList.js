@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import axios from "axios";
+import { css } from "@emotion/react";
+import { ClimbingBoxLoader } from "react-spinners";
+
 
 import RestaurantCard from "../components/RestaurantCard";
 
 import { Pagination } from "../components/Pagination";
+
+const boxStyle = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red; 
+`;
 
 function RestaurantList() {
   const [restaurants, setRestaurants] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(15);
   const [totalItems, setTotalItems] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     axios
       .get(
         `https://sr-back.onrender.com/api/restaurants?page=${currentPage}&limit=${itemsPerPage}`
@@ -25,7 +36,11 @@ function RestaurantList() {
       })
       .catch((err) => {
         console.log("Error from RestaurantList", err);
-      });
+      })
+      .finally(() => {
+        setLoading(false);
+      }) 
+      ;
 
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -91,6 +106,17 @@ function RestaurantList() {
       <br />
       <br />
       <br />
+
+      {loading && (
+  <div className="fixed top-0 left-0 w-full h-full bg-opacity-75 bg-white flex items-center justify-center z-50">
+    <div className="text-center">
+      <p className="text-lg font-semibold mb-2">Please wait while we curate a delightful experience for you...</p>
+      <p className="text-sm text-gray-600 mb-4">Your patience is truly appreciated!</p>
+    </div>
+    <ClimbingBoxLoader css={boxstyle} size={30} color={"grey"} loading={loading} />
+  </div>
+)}
+
       <div
         className="w-full flex flex-wrap justify-center relative z-20 bg-white"
         style={{ width: "100%" }}
